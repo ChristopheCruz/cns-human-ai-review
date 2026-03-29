@@ -17,7 +17,7 @@ papers = {
     "Siew2019":       ("Siew",       2019, "A"),
     "Beckage2020":    ("Beckage",    2020, "A"),
     "Stella2026":     ("Stella",     2026, "A"),
-    "StellaVit2019":  ("Stella",     2019, "A"),
+    "StellaVitevitch2019":  ("Stella",     2019, "A"),
     "Stella2024":     ("Stella",     2024, "A"),
     "Citraro2023":    ("Citraro",    2023, "A"),
     "Vitevitch2023":  ("Vitevitch",  2023, "A"),
@@ -38,14 +38,16 @@ papers = {
     "Stella2022":     ("Stella",     2022, "D"),
     "Semeraro2025":   ("Semeraro",   2025, "D"),
     "Dyer2020":       ("Dyer",       2020, "D"),
-    "BorgeH2010":     ("Borge-H.",   2010, "D"),
+    "BorgeHolthoefer2010":     ("Borge-H.",   2010, "D"),
     "Liu2024":        ("Liu",        2024, "D"),
-    "Giabbanel2024":  ("Giabbanelli",2024, "D"),
+    "Giabbanelli2024":  ("Giabbanelli",2024, "D"),
     "Denervaud2021":  ("Denervaud",  2021, "E"),
     "Luchini2024":    ("Luchini",    2024, "E"),
-    "KenettB2024":    ("Kenett",     2024, "E"),
+    "Kenett2024":    ("Kenett",     2024, "E"),
     "Chen2023":       ("Chen",       2023, "E"),
-    "Stella2022b":    ("Stella",     2022, "A"),
+    "StellaFerrara2022":    ("Stella",     2022, "A"),
+    "Page2021":       ("Page",       2021, "A"),
+    "Siew2019b":      ("Siew",       2019, "A"),
 }
 
 # ─────────────────────────────────────────────
@@ -54,25 +56,26 @@ papers = {
 # ─────────────────────────────────────────────
 
 sections = {
-    "Background_CNS":    ["Siew2019","Beckage2020","Vitevitch2023","Vitevitch2024",
-                          "Citraro2023","Stella2026","StellaVit2019","Stella2024",
+    "Background_CNS":    ["Siew2019","Siew2019b","Beckage2020","Vitevitch2023","Vitevitch2024",
+                          "Citraro2023","Stella2026","StellaVitevitch2019","Stella2024",
                           "Bullmore2012","Cole2015","Semeraro2021","Abramski2023",
-                          "Stella2022b"],
+                          "StellaFerrara2022"],
+    "Methods":           ["Page2021","Siew2019","Stella2026"],
     "Background_AI":     ["Rahwan2019","Almaatouq2022","Abramski2023"],
-    "Cluster_A":         ["Bullmore2012","Cole2015","Siew2019","Beckage2020",
-                          "Stella2026","StellaVit2019","Stella2024","Citraro2023",
-                          "Vitevitch2023","Vitevitch2024"],
+    "Cluster_A":         ["Bullmore2012","Cole2015","Siew2019","Siew2019b","Beckage2020",
+                          "Stella2026","StellaVitevitch2019","Stella2024","Citraro2023",
+                          "Vitevitch2023","Vitevitch2024","Page2021"],
     "Cluster_B":         ["Abramski2023","DeDuro2025","Haim2026","Abramski2025",
                           "Semeraro2021","Kenett2023"],
     "Cluster_C":         ["Almaatouq2022","Rahwan2019","Colleoni2024"],
     "Cluster_D":         ["Stella2020","Fatima2021","Teixeira2021","Abramski2022",
-                          "Stella2022","Semeraro2025","Dyer2020","BorgeH2010",
-                          "Liu2024","Giabbanel2024"],
-    "Cluster_E":         ["Denervaud2021","Luchini2024","KenettB2024","Chen2023",
+                          "Stella2022","Semeraro2025","Dyer2020","BorgeHolthoefer2010",
+                          "Liu2024","Giabbanelli2024"],
+    "Cluster_E":         ["Denervaud2021","Luchini2024","Kenett2024","Chen2023",
                           "Semeraro2021"],
     "Discussion":        ["Abramski2023","DeDuro2025","Rahwan2019","Colleoni2024",
                           "Fatima2021","Teixeira2021","Stella2020","Semeraro2025",
-                          "Denervaud2021","KenettB2024"],
+                          "Denervaud2021","Kenett2024"],
 }
 
 co_cite_weight = defaultdict(int)
@@ -116,8 +119,8 @@ louvain_palette = ["#534AB7","#0F6E56","#993C1D","#854F0B","#993556",
 # 5.  PLOT CO-CITATION NETWORK
 # ─────────────────────────────────────────────
 
-fig, axes = plt.subplots(1, 2, figsize=(20, 10), facecolor="white")
-fig.suptitle("Co-citation Network of 47 Included Papers",
+fig, axes = plt.subplots(1, 2, figsize=(20, 10), facecolor="none")
+fig.suptitle("Co-citation Network of 36 Included Papers",
              fontsize=16, fontweight="bold", y=1.01)
 
 pos = nx.spring_layout(G_cc, weight='weight', seed=42, k=2.2)
@@ -149,7 +152,7 @@ for ax, title, colors, legend_info in [
                             font_size=6.5, font_color="white", font_weight="bold")
     ax.set_title(title, fontsize=12, pad=10)
     ax.axis("off")
-    ax.set_facecolor("white")
+    ax.set_facecolor("none")
 
     if legend_info:
         patches = [mpatches.Patch(color=c, label=l) for l, c in legend_info]
@@ -164,8 +167,8 @@ for ax, title, colors, legend_info in [
                   framealpha=0.9, edgecolor="#D3D1C7")
 
 plt.tight_layout()
-plt.savefig("/mnt/user-data/outputs/figure3_cocitation_network.png",
-            dpi=200, bbox_inches="tight", facecolor="white")
+plt.savefig("figures/figure3_cocitation_network.png",
+            dpi=200, bbox_inches="tight", facecolor="none", transparent=True)
 plt.close()
 print("Co-citation network saved.")
 
@@ -179,19 +182,19 @@ authorship = {
     "Abramski2025":  ["Abramski","Citraro","Stella"],
     "Almaatouq2022": ["Almaatouq","Alsobay","Yin","Watts"],
     "Beckage2020":   ["Beckage","Siew"],
-    "BorgeH2010":    ["Borge-Holthoefer","Arenas"],
+    "BorgeHolthoefer2010":    ["Borge-Holthoefer","Arenas"],
     "Bullmore2012":  ["Bullmore","Sporns"],
     "Chen2023":      ["Chen"],
     "Citraro2023":   ["Citraro","De Deyne","Rossetti","Stella"],
     "Cole2015":      ["Cole","Bassett"],
     "Colleoni2024":  ["Colleoni","Arvidsson","Strati"],
-    "DeDuro2025":    ["De Duro","Franchino","Stella"],
+    "DeDuro2025":    ["De Duro","Franchino","Improta","Veltri","Stella"],
     "Denervaud2021": ["Denervaud","Christensen","Kenett","Beaty"],
     "Dyer2020":      ["Dyer","Kolic"],
     "Fatima2021":    ["Fatima","Li","Hills","Stella"],
-    "Giabbanel2024": ["Giabbanelli","Knox","Gray"],
+    "Giabbanelli2024": ["Giabbanelli","Knox","Gray"],
     "Haim2026":      ["Haim","Natan","Kenett"],
-    "KenettB2024":   ["Kenett","Beaty"],
+    "Kenett2024":   ["Kenett","Beaty"],
     "Kenett2023":    ["Kenett"],
     "Liu2024":       ["Liu","Zhang","Chen"],
     "Luchini2024":   ["Luchini","Wang","Kenett","Beaty"],
@@ -201,14 +204,17 @@ authorship = {
     "Semeraro2025":  ["Semeraro","Vilella","Stella"],
     "Siew2019":      ["Siew","Wulff","Beckage","Kenett"],
     "Stella2020":    ["Stella"],
-    "Stella2022":    ["Stella","Ferrara","De Domenico"],
-    "Stella2022b":   ["Stella"],
-    "Stella2024":    ["Stella","Citraro","Vitevitch","Rossetti"],
+    "Stella2022":    ["Stella"],
+    "StellaFerrara2022":   ["Stella","Ferrara","De Domenico"],
+    "Stella2024":    ["Stella","Citraro","Rossetti","Marinazzo","Kenett","Vitevitch"],
     "Stella2026":    ["Stella"],
-    "StellaVit2019": ["Stella","Vitevitch"],
+    "StellaVitevitch2019": ["Stella","Vitevitch"],
     "Teixeira2021":  ["Teixeira","Talaga","Swanson","Stella"],
     "Vitevitch2023": ["Vitevitch"],
     "Vitevitch2024": ["Vitevitch","Martinez","England"],
+    "Haim2026":      ["Haim","Passaro","Stella"],
+    "Page2021":      ["Page","McKenzie","Bossuyt"],
+    "Siew2019b":     ["Siew"],
 }
 
 # ─────────────────────────────────────────────
@@ -250,8 +256,8 @@ betweenness = nx.betweenness_centrality(G_ca, weight='weight', normalized=True)
 # 8.  PLOT CO-AUTHOR NETWORK
 # ─────────────────────────────────────────────
 
-fig, ax = plt.subplots(figsize=(14, 11), facecolor="white")
-ax.set_facecolor("white")
+fig, ax = plt.subplots(figsize=(14, 11), facecolor="none")
+ax.set_facecolor("none")
 ax.set_title("Co-authorship Network\nNode size = paper count  |  "
              "Border thickness = betweenness centrality  |  Colour = main cluster",
              fontsize=12, pad=12)
@@ -295,8 +301,8 @@ ax.legend(handles=patches, loc="lower left", fontsize=9,
 
 ax.axis("off")
 plt.tight_layout()
-plt.savefig("/mnt/user-data/outputs/figure4_coauthor_network.png",
-            dpi=200, bbox_inches="tight", facecolor="white")
+plt.savefig("figures/figure4_coauthor_network.png",
+            dpi=200, bbox_inches="tight", facecolor="none", transparent=True)
 plt.close()
 print("Co-author network saved.")
 

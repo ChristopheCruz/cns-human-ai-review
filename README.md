@@ -41,7 +41,7 @@ cns-human-ai-review/
 
 Cognitive Network Science (CNS) applies graph-theoretic and complexity science methods to model human cognitive structures, including semantic memory, emotional associations, and conceptual knowledge. As artificial intelligence (AI) systems become deeply embedded in human cognitive environments, a systematic understanding of the intersection between CNS and Human-AI systems is urgently needed.
 
-Following PRISMA 2020 guidelines, we conducted a systematic search across eight major academic databases. After deduplication (~2,800 unique records) and two-stage screening, **47 papers** were included in the final synthesis. Five thematic clusters were identified:
+Following PRISMA 2020 guidelines, we conducted a systematic search across eight major academic databases. After deduplication (~2,800 unique records) and two-stage screening, **36 papers** were included in the final synthesis. Five thematic clusters were identified:
 
 | Cluster | Theme | Key Methods |
 |---------|-------|-------------|
@@ -55,24 +55,24 @@ Following PRISMA 2020 guidelines, we conducted a systematic search across eight 
 
 ## 🔬 Bibliometric Analysis
 
-In addition to the qualitative synthesis, this repository includes a **bibliometric network analysis** of the 47 included papers:
+In addition to the qualitative synthesis, this repository includes a **bibliometric network analysis** of the 36 included papers:
 
 ### Co-citation Network
-- 34 nodes, 187 edges, density = 0.333
+- 36 nodes, 211 edges, density = 0.335
 - Louvain community detection → **3 empirical communities**
-- Top anchor papers: Abramski et al. (2023), Bullmore & Sporns (2012), Siew et al. (2019)
+- Top anchor papers: Abramski et al. (2023), Siew et al. (2019), Stella (2026)
 
 ### Co-authorship Network
-- 62 author nodes, 115 edges, density = 0.061
+- 68 author nodes, 134 edges, density = 0.059
 - Top bridge authors by betweenness centrality:
 
 | Author | Papers | Betweenness (β) |
 |--------|--------|-----------------|
-| Stella | 15 | 0.084 |
-| Vitevitch | 4 | 0.020 |
-| Kenett | 6 | 0.018 |
-| De Deyne | 2 | 0.014 |
-| Rossetti | 4 | 0.004 |
+| Stella | 16 | 0.181 |
+| Kenett | 6 | 0.115 |
+| Vitevitch | 4 | 0.029 |
+| Marinazzo | 1 | 0.013 |
+| Rossetti | 4 | 0.011 |
 
 ---
 
@@ -114,7 +114,7 @@ python code/export_figures.py
 |--------|-------------|
 | Figure 1 | Thematic cluster map of CNS and Human-AI research |
 | Figure 2 | PRISMA 2020 flow diagram of study selection |
-| Figure 3 | Co-citation network of 47 included papers (manual clusters vs Louvain communities) |
+| Figure 3 | Co-citation network of 36 included papers (manual clusters vs Louvain communities) |
 | Figure 4 | Co-authorship network with betweenness centrality |
 
 ---
