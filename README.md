@@ -63,16 +63,16 @@ In addition to the qualitative synthesis, this repository includes a **bibliomet
 - Top anchor papers: Abramski et al. (2023), Siew et al. (2019), Stella (2026)
 
 ### Co-authorship Network
-- 68 author nodes, 134 edges, density = 0.059
+- 71 author nodes, 150 edges, density = 0.060
 - Top bridge authors by betweenness centrality:
 
 | Author | Papers | Betweenness (β) |
 |--------|--------|-----------------|
-| Stella | 16 | 0.181 |
-| Kenett | 6 | 0.115 |
-| Vitevitch | 4 | 0.029 |
-| Marinazzo | 1 | 0.013 |
-| Rossetti | 4 | 0.011 |
+| Stella | 16 | 0.194 |
+| Kenett | 6 | 0.119 |
+| Vitevitch | 5 | 0.043 |
+| Marinazzo | 1 | 0.016 |
+| Mohammad | 1 | 0.013 |
 
 ---
 

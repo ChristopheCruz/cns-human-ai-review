@@ -47,7 +47,7 @@ papers = {
     "Chen2023":       ("Chen",       2023, "E"),
     "StellaFerrara2022":    ("Stella",     2022, "A"),
     "Page2021":       ("Page",       2021, "A"),
-    "Siew2019b":      ("Siew",       2019, "A"),
+    "Vitevitch2021":  ("Vitevitch",  2021, "A"),
 }
 
 # ─────────────────────────────────────────────
@@ -56,13 +56,13 @@ papers = {
 # ─────────────────────────────────────────────
 
 sections = {
-    "Background_CNS":    ["Siew2019","Siew2019b","Beckage2020","Vitevitch2023","Vitevitch2024",
+    "Background_CNS":    ["Siew2019","Vitevitch2021","Beckage2020","Vitevitch2023","Vitevitch2024",
                           "Citraro2023","Stella2026","StellaVitevitch2019","Stella2024",
                           "Bullmore2012","Cole2015","Semeraro2021","Abramski2023",
                           "StellaFerrara2022"],
     "Methods":           ["Page2021","Siew2019","Stella2026"],
     "Background_AI":     ["Rahwan2019","Almaatouq2022","Abramski2023"],
-    "Cluster_A":         ["Bullmore2012","Cole2015","Siew2019","Siew2019b","Beckage2020",
+    "Cluster_A":         ["Bullmore2012","Cole2015","Siew2019","Vitevitch2021","Beckage2020",
                           "Stella2026","StellaVitevitch2019","Stella2024","Citraro2023",
                           "Vitevitch2023","Vitevitch2024","Page2021"],
     "Cluster_B":         ["Abramski2023","DeDuro2025","Haim2026","Abramski2025",
@@ -201,7 +201,7 @@ authorship = {
     "Rahwan2019":    ["Rahwan","Cebrian","Obradovich","Bongard","Bonnefon",
                       "Breazeal","Christakis","Lazer","Pentland"],
     "Semeraro2021":  ["Semeraro","Vilella","Stella"],
-    "Semeraro2025":  ["Semeraro","Vilella","Stella"],
+    "Semeraro2025":  ["Semeraro","Vilella","Improta","De Duro","Mohammad","Ruffo","Stella"],
     "Siew2019":      ["Siew","Wulff","Beckage","Kenett"],
     "Stella2020":    ["Stella"],
     "Stella2022":    ["Stella"],
@@ -214,7 +214,7 @@ authorship = {
     "Vitevitch2024": ["Vitevitch","Martinez","England"],
     "Haim2026":      ["Haim","Passaro","Stella"],
     "Page2021":      ["Page","McKenzie","Bossuyt"],
-    "Siew2019b":     ["Siew"],
+    "Vitevitch2021": ["Vitevitch","Mullin"],
 }
 
 # ─────────────────────────────────────────────

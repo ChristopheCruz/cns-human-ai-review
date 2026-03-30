@@ -208,14 +208,6 @@
     "doi": "10.1155/2019/2108423"
   },
   {
-    "key": "Siew2019b",
-    "first_author": "Siew",
-    "year": 2019,
-    "cluster": "A",
-    "journal": "Brain Sciences",
-    "doi": "10.3390/brainsci11121628"
-  },
-  {
     "key": "Stella2020",
     "first_author": "Stella",
     "year": 2020,
@@ -270,6 +262,14 @@
     "cluster": "D",
     "journal": "Scientific Reports",
     "doi": "10.1038/s41598-021-98147-w"
+  },
+  {
+    "key": "Vitevitch2021",
+    "first_author": "Vitevitch",
+    "year": 2021,
+    "cluster": "A",
+    "journal": "Brain Sciences",
+    "doi": "10.3390/brainsci11121628"
   },
   {
     "key": "Vitevitch2023",
